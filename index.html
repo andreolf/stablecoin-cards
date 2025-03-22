@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 8 Stablecoin Cards of 2025</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black text-white font-sans">
+    <main class="p-6 max-w-6xl mx-auto space-y-8">
+      <h1 class="text-4xl font-bold text-center">Top 8 Stablecoin Cards of 2025</h1>
+      <!-- CARD TEMPLATE -->
+      <script>
+        const cards = [
+          {
+            name: "KAST Card",
+            badge: "🔥 High Rewards",
+            stablecoins: "USDC, USDT, USDe",
+            availability: "150+ countries (excl. India & China)",
+            rewards: "2–18% (varies by tier), APY boosts",
+            fees: "$20–$10,000/year",
+            pros: ["Instant virtual card", "Multi-chain support", "High rewards", "No bank account required"],
+            cons: ["High fees", "Newer brand", "KYC required"]
+          },
+          {
+            name: "Coinbase Card",
+            badge: "🛡️ Most Trusted",
+            stablecoins: "USDC, USDT",
+            availability: "US, UK, parts of Europe",
+            rewards: "1.5% USDC, up to 4% in other cryptos",
+            fees: "No annual fee, 2.49% FX fee",
+            pros: ["Trusted brand", "Secure", "No annual fee"],
+            cons: ["Conversion fee outside US", "Coinbase ecosystem only"]
+          },
+          {
+            name: "Wirex Card",
+            badge: "💰 Max Cashback",
+            stablecoins: "USDC, USDT",
+            availability: "UK, Europe, Asia-Pacific",
+            rewards: "Up to 8% in WXT",
+            fees: "Low/no conversion fees, premium tiers may apply",
+            pros: ["High rewards", "Wide crypto support"],
+            cons: ["WXT rewards less liquid", "Premium tier costs"]
+          },
+          {
+            name: "MetaMask Card",
+            badge: "🦊 Best for Web3 Natives",
+            stablecoins: "USDC, USDT, WETH (Linea)",
+            availability: "Brazil, Colombia, EU, Mexico, Switzerland, US, UK",
+            rewards: "1–3% USDC cashback",
+            fees: "No fees mentioned",
+            pros: ["Self-custody", "No preloading", "Linea integration", "Apple/Google Pay supported"],
+            cons: ["Limited access", "Linea-only tokens"]
+          },
+          {
+            name: "Stables Card",
+            badge: "🌍 Best Global Access",
+            stablecoins: "USDC, USDT, DAI, PYUSD",
+            availability: "50+ countries including US, AU, EU, Japan",
+            rewards: "None",
+            fees: "No fees",
+            pros: ["Wide availability", "Multiple currencies", "Easy to get started"],
+            cons: ["No rewards"]
+          },
+          {
+            name: "Moonwell x Cypher Card",
+            badge: "⚡ On-Chain Power",
+            stablecoins: "USDC (Base), others via Cypher",
+            availability: "Brazil, Colombia, EU, Mexico, Switzerland, US, UK",
+            rewards: "WELL, MORPHO, interest from vaults",
+            fees: "No annual fees",
+            pros: ["On-chain spending", "No intermediaries", "High security", "Apple/Google Pay supported"],
+            cons: ["USDC-only via Moonwell", "Early access limitations"]
+          },
+          {
+            name: "Avalanche Card",
+            badge: "❄️ Fastest Chain",
+            stablecoins: "USDC, USDT, AVAX, wAVAX, sAVAX",
+            availability: "Latin America, Caribbean, SE Asia, Africa",
+            rewards: "None currently advertised",
+            fees: "No spending fees",
+            pros: ["Self-custody", "Fast transactions", "Visa acceptance", "No intermediaries"],
+            cons: ["Limited availability", "Tax implications on AVAX spending"]
+          },
+          {
+            name: "Limited Card",
+            badge: "🧠 Best for Teams",
+            stablecoins: "USDC, EURC",
+            availability: "Global (invite-only)",
+            rewards: "No cashback, internal savings",
+            fees: "Not mentioned",
+            pros: ["Self-custody", "Team budgets", "EURC support", "Fee-free transfers"],
+            cons: ["Invite-only", "Limited token support"]
+          }
+        ];
+
+        const container = document.createElement('div');
+        container.className = "grid grid-cols-1 gap-6";
+        document.body.querySelector("main").appendChild(container);
+
+        cards.forEach(card => {
+          const cardEl = document.createElement('div');
+          cardEl.className = "rounded-2xl shadow-xl bg-zinc-900 border border-zinc-700 p-6 space-y-4 transition-all duration-300 hover:scale-[1.02]";
+          cardEl.innerHTML = `
+            <h2 class="text-2xl font-bold flex items-center gap-2">
+              ${card.name}
+              <span class="bg-gradient-to-r from-pink-500 to-yellow-400 text-black px-3 py-1 rounded-full animate-pulse text-sm">
+                ${card.badge}
+              </span>
+            </h2>
+            <p><strong>Supported:</strong> ${card.stablecoins}</p>
+            <p><strong>Availability:</strong> ${card.availability}</p>
+            <p><strong>Rewards:</strong> ${card.rewards}</p>
+            <p><strong>Fees:</strong> ${card.fees}</p>
+            <div class="flex flex-col md:flex-row md:space-x-12">
+              <div>
+                <p class="font-semibold">Pros:</p>
+                <ul class="list-disc list-inside text-green-400">${card.pros.map(p => `<li>${p}</li>`).join("")}</ul>
+              </div>
+              <div>
+                <p class="font-semibold">Cons:</p>
+                <ul class="list-disc list-inside text-red-400">${card.cons.map(c => `<li>${c}</li>`).join("")}</ul>
+              </div>
+            </div>
+          `;
+          container.appendChild(cardEl);
+        });
+      </script>
+    </main>
+  </body>
+</html>
